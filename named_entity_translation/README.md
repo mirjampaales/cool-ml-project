@@ -52,7 +52,7 @@ The `finetune_workflow.sh` script takes data folder (where the files are already
 **Running example:**
 
 ```
-baseline_train_workflow.sh ../mt_project/clean_data/et_en/general ../mt_project/sp_models ../mt_project/tokenized_data_et_en_general SPM_et_en et en ../mt_project/data-bin_et_en_general ../mt_project/et_en_general_model train test valid ../mt_project/baseline/checkpoint_best.pt
+finetune_workflow.sh ../mt_project/clean_data/et_en/general ../mt_project/sp_models ../mt_project/tokenized_data_et_en_general SPM_et_en et en ../mt_project/data-bin_et_en_general ../mt_project/et_en_general_model train valid test ../mt_project/baseline/checkpoint_best.pt
 ```
 
 * `clean_data/et-en/general` folder consists of files `train.et, train.en, test.et, test.en, valid.et, valid.et`
