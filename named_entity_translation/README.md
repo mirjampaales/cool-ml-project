@@ -1,11 +1,22 @@
 # Named Entity Translation
 
+Next two steps are implemented in `named_entity_extraction.py` script
 
 ## Named Entity Extraction
 
+1. Gathered data from open-source data (tatoeba, wikimedia). 
+2. Applied estonian named entity recognition model to the gathered data, to find sentences that contain named entities. 
+* The NER model used on estonian data: https://huggingface.co/tartuNLP/EstBERT_NER
+
 ## Named Entity Data Augmentation
 
+1. Gathered lists of person and location names
+2. Replaced the named entities in the extracted sentences with the gathered names
+3. Obtained augmented data
+
 ## Single-direction model finetuning
+
+Here we finetune a baseline model on the augmented data that was generated in the previous step.
 
 **Requirements for environment:**
 ```
