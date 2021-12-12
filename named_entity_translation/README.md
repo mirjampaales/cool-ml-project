@@ -24,7 +24,7 @@ sentencepiece==0.1.96
 fairseq==0.10.2
 ```
 
-We assume that there is an Estonian-English baseline single-directional model already trained.
+We assume that there is an Estonian-English baseline single-directional model already trained. Our model was trained on open-source data from [OPUS](https://opus.nlpl.eu/) with [fairseq](https://fairseq.readthedocs.io/en/latest/) framework.
 
 The `finetune_workflow.sh` script takes data folder (where the files are already divided into train-test-valid) as input and outputs a single-direction model trained on the input data.
 
