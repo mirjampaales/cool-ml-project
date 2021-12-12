@@ -1,0 +1,9 @@
+[submodule "named_entity_recognition/xlm-roberta-ner"]
+	path = named_entity_recognition/xlm-roberta-ner
+	url = https://github.com/mukhal/xlm-roberta-ner.git
+[submodule "named_entity_recognition/turku-ner-corpus"]
+	path = named_entity_recognition/turku-ner-corpus
+	url = https://github.com/TurkuNLP/turku-ner-corpus
+[submodule "named_entity_recognition/EstNER"]
+	path = named_entity_recognition/EstNER
+	url = https://github.com/ksirts/EstNER
