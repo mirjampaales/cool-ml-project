@@ -1,5 +1,5 @@
 pretrained_models/
-et_ner_model/
-en_ner_model/
-fi_ner_model/
-multilingual_ner_model/
+et-model/
+en-model/
+fi-model/
+merged-model/
