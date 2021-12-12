@@ -1,6 +1,6 @@
 # Named Entity Translation
 
-Next two steps are implemented in `named_entity_extraction.py` script
+Next two steps are implemented in the data augmentation scripts in the `scripts` folder.
 
 ## Named Entity Extraction
 
@@ -10,9 +10,9 @@ Next two steps are implemented in `named_entity_extraction.py` script
 
 ## Named Entity Data Augmentation
 
-1. Gathered lists of person and location names
-2. Replaced the named entities in the extracted sentences with the gathered names
-3. Obtained augmented data
+1. Gathered lists of person and location names.
+2. Replaced the named entities in the extracted sentences with the gathered names.
+3. Obtained augmented data.
 
 ## Single-direction model finetuning
 
