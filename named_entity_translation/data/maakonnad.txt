@@ -1,0 +1,30 @@
+Lääne-Viru maakond
+Lääne-Virumaa
+Harju maakond
+Harjumaa
+Hiiu maakond
+Hiiumaa
+Ida-Viru maakond
+Ida-Virumaa
+Järva maakond
+Järvamaa
+Jõgeva maakond
+Jõgevamaa
+Lääne maakond
+Läänemaa
+Pärnu maakond
+Pärnumaa
+Põlva maakond
+Põlvamaa
+Rapla maakond
+Raplamaa
+Saare maakond
+Saaremaa
+Tartu maakond
+Tartumaa
+Valga maakond
+Valgamaa
+Viljandi maakond
+Viljandimaa
+Võru maakond
+Võrumaa
