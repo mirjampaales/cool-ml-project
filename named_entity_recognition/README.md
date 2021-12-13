@@ -37,8 +37,8 @@ the `finetuned_models` directory.
 | XLM-R (multilingual large) | 0.9228 | 0.8295  | 0.8871   |
 | SOTA                       | 0.946  | 0.8986  | 0.9209   |
 
-Although our scores don't match the SOTA, we see that the multilinguality does not affect the performance significantly 
-in most cases. Therefore, in a real world use case, a multilingual NER model can be considered and applying the 
+Although our scores don't match the SOTA, we see that the multilinguality does not affect the performance significantly
+in most cases. Therefore, in a real world use case, a multilingual NER model can be considered and applying the
 techniques from the SOTA papers on multilingual models could have potential as well.
 
 Some things that should be noted about these scores:
@@ -55,6 +55,10 @@ The SOTA result info was taken from the following papers:
 - Finnish: http://www.lrec-conf.org/proceedings/lrec2020/pdf/2020.lrec-1.567.pdf
 - Estonian: https://aclanthology.org/2021.nodalida-main.2.pdf
 
+The multilingual finetuned XLM-R (base) can be found
+[here](https://drive.google.com/file/d/1vVRnEup8AEoUEp1XehV52zkAr0BEwRry/view?usp=sharing)
+
 ## Applying on Ajapaik's dataset
 
-TODO
+Code for extracting named entities on additional datasets can be found in the included `predict-xlmr-ner.ipynb`
+notebook. A small sample of results applied on Ajapaik's dataset can be found in `ajapaik.csv`.
