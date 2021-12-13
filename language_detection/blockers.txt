@@ -1,1 +1,2 @@
-so tired why didn't i start sooner
+predicting language for all of the dataset using one model will take ~4 hours on google colab
+strangely encoded characters will make the model stop
