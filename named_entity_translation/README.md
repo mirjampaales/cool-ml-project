@@ -58,3 +58,75 @@ finetune_workflow.sh ../mt_project/clean_data/et_en/general ../mt_project/sp_mod
 * `clean_data/et-en/general` folder consists of files `train.et, train.en, test.et, test.en, valid.et, valid.et`
 * estonian is the source language and english is the target language
 * tokenized data folder should be created for every language pair direction and domain separately, so to avoid overwriting other tokenized data
+
+## Results
+
+Models were trained for [person names](https://drive.google.com/file/d/1sbIdk9XydEFVbClZYTMp2SCi2AxtzUO3/view?usp=sharing) and [location names](https://drive.google.com/file/d/1Lkwx2V_r4DQU5mYCWA7Sz-Ti8yk9eWcq/view?usp=sharing)
+
+**BLEU scores on visitestonia test data:**
+
+| Model        | Result (BLEU) |
+| ------------ | ------------- |
+| Baseline     |    32.72      |
+| Extracted_FT |    32.68      |
+| Person_FT    |    16.05      |
+| Location_FT  |    24.74      |
+| All_FT       |    13.05      |
+
+**Some examples of test on Ajapaik's data:**
+
+```
+Source: Karatuzi pargis, Koidu Treimann ja Aili Karp
+Baseline: Karatuz Park, Dawn Treimann and Aili Karp
+Person FT: Karatuz Park, Koidu Treimann and Aili Karp
+```
+```
+Source: Saapaküla koorejaam
+Baseline: Boot Village Bark Station
+Location FT: Saapaküla shell station
+```
+```
+Source: Foto.  Võru, puitelamu Lenini tn.6( Jüri t)  1984.a.
+Baseline: Photo. Collage, wooden house Lenini tn.6(Jüri t) in 1984.
+Location_FT: Photo. Võru, a Puitelamu Lenini tn.6( Jüri t) in 1984.
+```
+```
+Source: Arnold Lõhmus aias viiulit mängimas
+Baseline: Arnold Fragrance playing violin in the garden
+Person_FT: Arnold Lõhmus playing fiddle in the garden
+```
+```
+Source: Foto  "Liivaskulptuur "Võru vähk"  autor Kalle Pruuden Eesti juulis 2008
+Baseline: Kalle Pruuden, author of the photo "Sand sculpture "Cancer of the Strangle" in July 2008
+Person_FT: Photo "Liivaskulptuur "Võru cancer" by Kalle Pruuden in July 2008
+```
+```
+Source: Perekond Kullerkup Tõusu (Palvemaja) 8 maja uksel. Rakvere Tõusu t 8
+Baseline: Family Courier Rise (Prayer House) 8 at the door of the house. Rakvere Rise t 8
+Location_FT: The family Kullerkup Tõusu (Palvemaja) 8 at the door of the house. Rakvere Tõusu t 8
+```
+```
+Source: Koguva külavahe
+Baseline: The Gathering Village
+Person_FT: Koguva guest house (PER)
+```
+
+**How to use the finetuned models:**
+
+Running example:
+
+```
+fairseq-interactive $DATA_DIR \
+    --task translation \
+    --source-lang $SRC_LANG \
+    --target-lang $TGT_LANG \
+    --bpe sentencepiece \
+    --remove-bpe \
+    --sentencepiece-model $SP_MODEL_PATH \
+    --path $MODEL_DIR \
+```
+where 
+* `$DATA_DIR` is directory with dict.\*.txt files
+* `$SRC_LANG` and `$TGT_LANG` are et and et respectively
+* `$SP_MODEL_PATH` is the path of sentencepiece model file (sp-model.model)
+* `$MODEL_DIR` is the directory where the finetuned model checkpoint_best.pt is
