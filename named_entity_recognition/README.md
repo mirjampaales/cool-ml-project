@@ -3,7 +3,7 @@
 Named entity recognition was tackled in this project to enable the client extract additional keywords - names - from
 their existing dataset. As this data is multilingual (and the original language is not known) we decided to experiment
 with multilingual NER. We chose XLM-R as our pretrained base model and finetuned both its base and large variants. As
-our initial automatic language recognition experiments showed that Estonian, Finnish and German were the most common
+our initial automatic language recognition experiments showed that Estonian, Finnish and English were the most common
 langauges in Ajapaik's dataset, those were chosen for the multilingual model as well.
 
 ## Finetuning
