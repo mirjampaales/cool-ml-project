@@ -61,7 +61,7 @@ finetune_workflow.sh ../mt_project/clean_data/et_en/general ../mt_project/sp_mod
 
 ## Results
 
-Models were trained for [person names](https://drive.google.com/file/d/1sbIdk9XydEFVbClZYTMp2SCi2AxtzUO3/view?usp=sharing) and [location names](https://drive.google.com/file/d/1Lkwx2V_r4DQU5mYCWA7Sz-Ti8yk9eWcq/view?usp=sharing)
+We performed multiple experiments. We uploaded two of the trained models: [person name model](https://drive.google.com/file/d/1g29QjyxlrWU1RM2b4JG_ukzPk2x443RF/view?usp=sharing) and [location name model](https://drive.google.com/file/d/1YQgJg-f2Ok7Aqo-EgeaPX-WRr6AeLM5b/view?usp=sharing).
 
 **BLEU scores on visitestonia test data:**
 
